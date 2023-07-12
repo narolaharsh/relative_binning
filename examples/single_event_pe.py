@@ -13,8 +13,8 @@ import lalsimulation as lalsim
 
 ### setting up rundir
 
-outdir = 'example_run'
-label = 'example_run'
+outdir = 'example_single_event_run'
+label = 'trial_0'
 bilby.core.utils.setup_logger(outdir=outdir, label=label)
 seed = 2023
 total_err = 0.01

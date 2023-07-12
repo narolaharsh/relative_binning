@@ -13,7 +13,7 @@ import lal
 import lalsimulation as lalsim
 
 
-outdir = 'example_lensing_joint_pe'
+outdir = 'example_lensed_event_joint_pe'
 label = 'trial_0'
 seed_1 = 150914
 seed_2 = 140915
@@ -113,7 +113,7 @@ waveform_arguments = dict(waveform_approximant = waveform_approximant, reference
 
 waveform_generator = bilby.gw.WaveformGenerator(duration = duration,
                                                             sampling_frequency= sampling_frequency,
-                                                            frequency_domain_source_model = bilby.gw.source.lensed_lal_binary_black_hole,
+                                                            frequency_domain_source_model = joint_pe_likelihood.lensed_lal_binary_black_hole,
                                                 parameter_conversion=bilby.gw.conversion.convert_to_lal_binary_black_hole_parameters,
                                                 waveform_arguments = waveform_arguments)
 
